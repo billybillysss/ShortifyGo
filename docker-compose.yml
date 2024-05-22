@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  redis:
+    build: db
+    ports:
+      - "6379:6379"
+    volumes:
+      - .data:/data
+
+  api:
+    build: api
+    ports:
+      - "7001:7001"
+    depends_on:
+      - redis
+    volumes:
+      - ./api/.env:/app/.env
