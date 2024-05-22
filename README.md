@@ -96,7 +96,7 @@ SHORTIFYGO/
   ```json
   {
     "URL": "https://www.example.com",
-    "Short": "example"
+    "Short": ""
   }
   ```
 - **Response Body:** JSON containing the status, original URL, short code, remaining requests, and limit reset time.
@@ -104,7 +104,7 @@ SHORTIFYGO/
   {
     "Status": "success",
     "URL": "https://www.example.com",
-    "Short": "example",
+    "Short": "http://{Domain}/{ShortId}",
     "RemainRequest": 5,
     "LimitRestTime": "2024-05-23T00:00:00Z"
   }
