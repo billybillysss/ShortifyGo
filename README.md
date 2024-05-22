@@ -11,7 +11,6 @@ ShortifyGo is a URL shortening service built with Go and Docker. It uses Redis f
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Endpoints](#endpoints)
-- [License](#license)
 
 ## 🛠️ Installation
 
@@ -34,16 +33,16 @@ Once the services are up and running, you can access the API at `http://localhos
 
 ### ✂️ Shorten a URL
 
-To shorten a URL, send a POST request to `/shorten` with the URL in the request body.
+To shorten a URL, send a POST request to `/api/v1` with the URL in the request body.
 
 Example:
 ```sh
-curl -X POST -d '{"url":"https://www.example.com"}' http://localhost:7001/shorten
+curl -X POST -d '{"url":"https://www.example.com"}' http://localhost:7001/api/v1
 ```
 
 ### 🔍 Retrieve a URL
 
-To retrieve the original URL, send a GET request to `/retrieve/{shortCode}`.
+To retrieve the original URL, send a GET request to `/{shortId}`.
 
 Example:
 ```sh
